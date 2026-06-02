@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/timeline/timeline",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/ai/ai",
+    "pages/about/about",
+    "pages/challenge/challenge",
+    "pages/poster/poster",
+    "pages/daily/daily"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#005bac",
+    "navigationBarTitleText": "航迹1952",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f0e8",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#005bac",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_active.png"
+      },
+      {
+        "pagePath": "pages/timeline/timeline",
+        "text": "时间线",
+        "iconPath": "images/timeline.png",
+        "selectedIconPath": "images/timeline_active.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search_active.png"
+      },
+      {
+        "pagePath": "pages/ai/ai",
+        "text": "AI问答",
+        "iconPath": "images/ai.png",
+        "selectedIconPath": "images/ai_active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/about.png",
+        "selectedIconPath": "images/about_active.png"
+      }
+    ]
+  },
+  "useExtendedLib": {},
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

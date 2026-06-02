@@ -1,0 +1,45 @@
+<view class="page-container">
+  <view class="banner-title">每日一史</view>
+  <view class="date-tag">{{today}}</view>
+
+  <!-- 历史上的今天 -->
+  <view wx:if="{{todayEvents.length > 0}}">
+    <view class="section-title">历史上的今天</view>
+    <view wx:for="{{todayEvents}}" wx:key="year" class="today-card retro-card" hover-class="tap-active" bindtap="goToDetail" data-year="{{item.year}}">
+      <view class="today-header">
+        <view class="year-badge">{{item.year}}</view>
+        <text class="category-tag">{{item.category}}</text>
+      </view>
+      <view class="today-title">{{item.title}}</view>
+      <view class="today-summary">{{item.summary}}</view>
+    </view>
+  </view>
+
+  <!-- 今日推荐 -->
+  <view class="section-title">今日推荐</view>
+  <view class="today-card retro-card" wx:if="{{todayEvent}}" hover-class="tap-active" bindtap="goToDetail" data-year="{{todayEvent.year}}">
+    <view class="today-header">
+      <view class="year-badge">{{todayEvent.year}}</view>
+      <text class="category-tag">{{todayEvent.category}}</text>
+    </view>
+    <view class="today-title">{{todayEvent.title}}</view>
+    <view class="today-summary">{{todayEvent.summary}}</view>
+    <view class="today-detail">{{todayEvent.details}}</view>
+    <view class="today-tags">
+      <text wx:for="{{todayEvent.tags}}" wx:key="*this" class="tag-item">{{item}}</text>
+    </view>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading">加载中...</view>
+
+  <!-- 你可能还感兴趣 -->
+  <view class="section-title" wx:if="{{recommend.length > 0}}">你可能还感兴趣</view>
+  <view wx:for="{{recommend}}" wx:key="year" class="rec-card retro-card" hover-class="tap-active" bindtap="goToDetail" data-year="{{item.year}}">
+    <view class="rec-header">
+      <view class="rec-year">{{item.year}}</view>
+      <text class="category-tag">{{item.category}}</text>
+    </view>
+    <view class="rec-title">{{item.title}}</view>
+    <view class="rec-summary">{{item.summary}}</view>
+  </view>
+</view>

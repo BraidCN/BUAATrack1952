@@ -1,0 +1,98 @@
+/* 每日一史页面 */
+
+.date-tag {
+  text-align: center;
+  font-size: 24rpx;
+  color: var(--primary-gold);
+  margin-bottom: 20rpx;
+  padding: 6rpx 0;
+  border-top: 1rpx solid #e0d5c5;
+  border-bottom: 1rpx solid #e0d5c5;
+}
+
+.today-card {
+  margin-bottom: 30rpx;
+  border-left: 8rpx solid var(--primary-blue);
+  background: linear-gradient(135deg, #fffdf7, #ffffff);
+}
+
+.rec-card {
+  margin-bottom: 16rpx;
+  padding: 16rpx 20rpx;
+}
+
+.today-header {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.today-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 12rpx;
+}
+
+.today-summary {
+  font-size: 26rpx;
+  color: var(--primary-blue);
+  line-height: 1.6;
+  margin-bottom: 12rpx;
+  font-weight: 500;
+}
+
+.today-detail {
+  font-size: 24rpx;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 16rpx;
+}
+
+.today-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+}
+
+.today-tags .tag-item {
+  background: #f5f0e8;
+  color: var(--text-dark);
+  padding: 6rpx 14rpx;
+  border-radius: 20rpx;
+  font-size: 20rpx;
+  border: 1rpx solid var(--border-color);
+}
+
+.rec-card {
+  margin-bottom: 16rpx;
+  padding: 20rpx;
+}
+
+.rec-header {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-bottom: 8rpx;
+}
+
+.rec-year {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+.rec-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 6rpx;
+}
+
+.rec-summary {
+  font-size: 22rpx;
+  color: var(--text-light);
+  line-height: 1.5;
+}

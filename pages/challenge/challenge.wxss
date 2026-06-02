@@ -1,0 +1,230 @@
+/* 闯关页面 */
+
+.challenge-intro {
+  padding-bottom: 40rpx;
+}
+
+.intro-rules, .intro-ranks {
+  margin-bottom: 20rpx;
+}
+
+.intro-section-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 16rpx;
+  padding-bottom: 12rpx;
+  border-bottom: 2rpx solid var(--border-color);
+}
+
+.rule-item {
+  font-size: 26rpx;
+  color: #444;
+  line-height: 1.8;
+  padding: 6rpx 0;
+}
+
+.rank-item {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid var(--border-color);
+}
+.rank-item:last-child {
+  border-bottom: none;
+}
+
+.rank-label {
+  display: inline-block;
+  padding: 8rpx 20rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 16rpx;
+  min-width: 100rpx;
+  text-align: center;
+  text-shadow: 0 1rpx 2rpx rgba(0,0,0,0.2);
+  box-shadow: inset 0 1rpx 0 rgba(255,255,255,0.3), 0 2rpx 4rpx rgba(0,0,0,0.15);
+}
+
+.rank-hang .rank-label { background: linear-gradient(180deg, #ffeaa7 0%, #f1c40f 40%, #e67e22 100%); }
+.rank-top .rank-label { background: linear-gradient(180deg, #a9dfbf 0%, #2ecc71 40%, #27ae60 100%); }
+.rank-human .rank-label { background: linear-gradient(180deg, #aed6f1 0%, #3498db 40%, #2980b9 100%); }
+.rank-npc .rank-label { background: linear-gradient(180deg, #d5dbdb 0%, #95a5a6 40%, #7f8c8d 100%); }
+.rank-la .rank-label { background: linear-gradient(180deg, #85929e 0%, #34495e 40%, #2c3e50 100%); }
+
+.rank-desc {
+  font-size: 24rpx;
+  color: var(--text-light);
+}
+
+.start-btn, .confirm-btn, .next-btn {
+  margin-top: 30rpx;
+  background: var(--primary-blue);
+  color: #fff;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+/* 游戏区域 */
+.game-area {
+  padding-bottom: 40rpx;
+}
+
+.level-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.level-text {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+.error-text {
+  font-size: 24rpx;
+  color: #e74c3c;
+}
+
+.game-hint {
+  font-size: 24rpx;
+  color: var(--text-light);
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.event-card {
+  width: 48%;
+  background: #fff;
+  border: 3rpx dashed #e0d5c5;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  text-align: center;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.03);
+}
+
+.card-selected {
+  border: 3rpx solid var(--primary-blue);
+  box-shadow: 0 0 16rpx rgba(0, 91, 172, 0.3);
+  background: #f8fbff;
+}
+
+.card-year {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 8rpx;
+}
+
+.card-title {
+  font-size: 24rpx;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 8rpx;
+  min-height: 66rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-category {
+  display: inline-block;
+  font-size: 20rpx;
+  color: var(--primary-gold);
+  background: #fef6e0;
+  padding: 4rpx 14rpx;
+  border-radius: 20rpx;
+}
+
+/* 知识问答 */
+.quiz-area {
+  padding-bottom: 40rpx;
+}
+
+.quiz-question {
+  margin-bottom: 30rpx;
+}
+
+.quiz-type {
+  font-size: 22rpx;
+  color: var(--primary-gold);
+  background: #fef6e0;
+  display: inline-block;
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+  margin-bottom: 12rpx;
+}
+
+.quiz-stem {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+.quiz-options {
+  margin-bottom: 30rpx;
+}
+
+.quiz-option {
+  background: #fff;
+  border: 4rpx solid var(--border-color);
+  border-radius: 12rpx;
+  padding: 24rpx;
+  margin-bottom: 16rpx;
+  font-size: 28rpx;
+  color: var(--text-dark);
+  transition: all 0.2s;
+}
+
+.option-selected {
+  border-color: var(--primary-blue);
+  background: rgba(0, 91, 172, 0.05);
+}
+
+.option-correct {
+  border-color: #27ae60;
+  background: rgba(39, 174, 96, 0.1);
+}
+
+.option-wrong {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+}
+
+/* 结果区域 */
+.result-area {
+  text-align: center;
+  padding: 80rpx 0;
+}
+
+.result-icon {
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.result-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 16rpx;
+}
+
+.result-desc {
+  font-size: 26rpx;
+  color: var(--text-light);
+  margin-bottom: 40rpx;
+}

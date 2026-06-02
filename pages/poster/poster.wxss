@@ -1,0 +1,90 @@
+/* 海报页面 */
+
+.poster-card {
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin-bottom: 40rpx;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8rpx 24rpx rgba(0,0,0,0.15);
+}
+
+.rank-hang { background: linear-gradient(150deg, #f7dc6f 0%, #f1c40f 30%, #e67e22 100%); }
+.rank-top  { background: linear-gradient(150deg, #58d68d 0%, #2ecc71 30%, #27ae60 100%); }
+.rank-human{ background: linear-gradient(150deg, #5dade2 0%, #3498db 30%, #2980b9 100%); }
+.rank-npc  { background: linear-gradient(150deg, #bdc3c7 0%, #95a5a6 30%, #7f8c8d 100%); }
+.rank-la   { background: linear-gradient(150deg, #5d6d7e 0%, #34495e 30%, #2c3e50 100%); }
+
+.poster-header {
+  margin-bottom: 30rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid rgba(255,255,255,0.3);
+}
+
+.poster-logo {
+  font-size: 48rpx;
+  font-weight: bold;
+  letter-spacing: 6rpx;
+}
+
+.poster-sub {
+  font-size: 26rpx;
+  opacity: 0.9;
+  margin-top: 8rpx;
+}
+
+.poster-rank {
+  font-size: 120rpx;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 20rpx 0;
+}
+
+.poster-rank-desc {
+  font-size: 28rpx;
+  opacity: 0.95;
+  margin-bottom: 30rpx;
+}
+
+.poster-stats {
+  background: rgba(255,255,255,0.15);
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.stat-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 12rpx 0;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid rgba(255,255,255,0.2);
+}
+.stat-line:last-child {
+  border-bottom: none;
+}
+
+.stat-name { opacity: 0.9; }
+.stat-value { font-weight: bold; }
+
+.poster-footer {
+  font-size: 22rpx;
+  opacity: 0.8;
+  line-height: 1.8;
+}
+
+.hidden-canvas {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 750px;
+  height: 1200px;
+}
+
+.save-btn {
+  background: var(--primary-blue);
+  color: #fff;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}

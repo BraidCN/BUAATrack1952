@@ -1,0 +1,36 @@
+<!-- 搜索页面 -->
+<view class="page-container">
+  <view class="search-box">
+    <input class="search-input" placeholder="搜索校史关键词..."
+           bindinput="onInput" bindconfirm="onSearch"
+           value="{{keyword}}" confirm-type="search"/>
+    <button class="search-btn" bindtap="onSearch">搜索</button>
+  </view>
+
+  <view class="hot-searches" wx:if="{{!hasSearched}}">
+    <view class="section-title">热门搜索</view>
+    <view class="hot-tags">
+      <text class="hot-tag" bindtap="quickSearch" hover-class="tap-active" data-key="北京一号">北京一号</text>
+      <text class="hot-tag" bindtap="quickSearch" hover-class="tap-active" data-key="建校">建校</text>
+      <text class="hot-tag" bindtap="quickSearch" hover-class="tap-active" data-key="1958">1958</text>
+      <text class="hot-tag" bindtap="quickSearch" hover-class="tap-active" data-key="校区">校区</text>
+      <text class="hot-tag" bindtap="quickSearch" hover-class="tap-active" data-key="校训">校训</text>
+      <text class="hot-tag" bindtap="quickSearch" hover-class="tap-active" data-key="双一流">双一流</text>
+    </view>
+  </view>
+
+  <view wx:if="{{hasSearched}}">
+    <view class="result-info">共找到 {{total}} 条结果</view>
+    <view wx:if="{{results.length === 0}}" class="empty-state">
+      <text>未找到相关内容，换个关键词试试</text>
+    </view>
+    <view wx:for="{{results}}" wx:key="year" class="search-result-item retro-card"
+          data-year="{{item.year}}" bindtap="goToDetail" hover-class="tap-active">
+      <view class="result-year">{{item.year}}</view>
+      <view class="result-content">
+        <view class="result-title">{{item.title}}</view>
+        <view class="result-summary">{{item.summary}}</view>
+      </view>
+    </view>
+  </view>
+</view>

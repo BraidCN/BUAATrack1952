@@ -1,0 +1,91 @@
+/* 全局样式 - 五六十年代怀旧风格 */
+
+page {
+  --primary-blue: #005bac;
+  --primary-gold: #b8860b;
+  --bg-warm: #f5f0e8;
+  --text-dark: #2c2c2c;
+  --text-light: #666666;
+  --border-color: #e0d5c5;
+  background-color: var(--bg-warm);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+}
+
+.page-container {
+  padding: 20rpx 30rpx;
+  min-height: 100vh;
+}
+
+/* 卡片 - 双层阴影模拟纸质叠放 */
+.retro-card {
+  background: #ffffff;
+  border: 2rpx solid var(--border-color);
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.03), 0 6rpx 16rpx rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.banner-title {
+  background: var(--primary-blue);
+  color: #ffffff;
+  padding: 20rpx 30rpx;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 4rpx;
+  margin-bottom: 24rpx;
+}
+
+/* 金色分割线 - 中间实两端虚 */
+.gold-line {
+  width: 120rpx;
+  height: 2rpx;
+  background: linear-gradient(90deg, transparent, var(--primary-gold) 20%, var(--primary-gold) 80%, transparent);
+  margin: 16rpx auto;
+}
+
+.year-badge {
+  display: inline-block;
+  background: var(--primary-blue);
+  color: #ffd700;
+  font-size: 24rpx;
+  font-weight: bold;
+  padding: 6rpx 18rpx;
+  border-radius: 6rpx;
+  letter-spacing: 2rpx;
+}
+
+.category-tag {
+  display: inline-block;
+  background: #fef6e0;
+  color: var(--primary-gold);
+  font-size: 22rpx;
+  padding: 4rpx 14rpx;
+  border-radius: 10rpx;
+}
+
+/* Section 标题 - 菱形装饰符 */
+.section-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 16rpx;
+  padding-left: 16rpx;
+  border-left: 6rpx solid var(--primary-blue);
+}
+
+.loading {
+  text-align: center;
+  padding: 60rpx;
+  color: var(--text-light);
+  font-size: 28rpx;
+}
+
+/* 全局触摸反馈 */
+.tap-active {
+  opacity: 0.75;
+  transform: scale(0.97);
+}

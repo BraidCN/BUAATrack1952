@@ -1,0 +1,34 @@
+<!-- 时间线页面 -->
+<view class="page-container">
+  <view class="banner-title">校史时间线</view>
+
+  <!-- 分类筛选栏 -->
+  <view class="filter-bar">
+    <scroll-view scroll-x class="filter-scroll">
+      <view class="filter-item {{currentFilter === null ? 'filter-active' : ''}}" hover-class="tap-active" bindtap="clearFilter">全部</view>
+      <view wx:for="{{categories}}" wx:key="*this" class="filter-item {{currentFilter === item ? 'filter-active' : ''}}" data-category="{{item}}" hover-class="tap-active" bindtap="filterByCategory">{{item}}</view>
+    </scroll-view>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading">加载中...</view>
+
+  <!-- 时间线列表 -->
+  <view wx:for="{{timeline}}" wx:key="year" class="timeline-item">
+    <view class="timeline-left">
+      <view class="timeline-year">{{item.year}}</view>
+      <view class="timeline-dot"></view>
+    </view>
+    <view class="timeline-card retro-card" data-year="{{item.year}}" hover-class="tap-active" bindtap="goToDetail">
+      <view class="timeline-category">
+        <text class="category-tag">{{item.category}}</text>
+      </view>
+      <view class="timeline-title">{{item.title}}</view>
+      <view class="timeline-summary">{{item.summary}}</view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:if="{{!loading && timeline.length === 0}}" class="empty-state">
+    <text>该分类下暂无记录</text>
+  </view>
+</view>

@@ -1,0 +1,70 @@
+/* 详情页样式 */
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.detail-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 20rpx;
+}
+
+.detail-summary {
+  background: linear-gradient(135deg, #fef9ee, #fef6e0);
+  font-size: 26rpx;
+  color: var(--text-dark);
+  line-height: 1.8;
+  border-left: 8rpx solid var(--primary-gold);
+}
+
+.detail-body {
+  font-size: 26rpx;
+  line-height: 2;
+  color: #444;
+}
+
+.detail-section-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 12rpx;
+  padding-bottom: 12rpx;
+  border-bottom: 2rpx solid var(--border-color);
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20rpx;
+  padding: 20rpx;
+}
+
+.tag-label {
+  font-size: 24rpx;
+  color: var(--text-light);
+  margin-right: 10rpx;
+}
+
+.tag-item {
+  background: #f5f0e8;
+  color: var(--text-dark);
+  padding: 8rpx 18rpx;
+  border-radius: 24rpx;
+  font-size: 22rpx;
+  margin: 4rpx 6rpx 4rpx 0;
+  border: 1rpx solid var(--border-color);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 100rpx 0;
+  color: var(--text-light);
+  font-size: 28rpx;
+}

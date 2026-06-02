@@ -1,0 +1,89 @@
+<view class="page-container">
+
+  <!-- 首页：规则说明 -->
+  <view wx:if="{{status === 'idle'}}" class="challenge-intro">
+    <view class="banner-title">校史时间线闯关</view>
+    <view class="intro-rules retro-card">
+      <view class="intro-section-title">游戏规则</view>
+      <view class="rule-item">1. 时间线排序 3 关，每关 4 个历史节点</view>
+      <view class="rule-item">2. 排序通过后进入知识问答 3 道题</view>
+      <view class="rule-item">3. 错误次数计入最终评级</view>
+    </view>
+    <view class="intro-ranks retro-card">
+      <view class="intro-section-title">评级标准</view>
+      <view class="rank-item rank-hang">
+        <text class="rank-label">夯</text>
+        <text class="rank-desc">0 次错误（一命通关）</text>
+      </view>
+      <view class="rank-item rank-top">
+        <text class="rank-label">顶级</text>
+        <text class="rank-desc">1-3 次错误</text>
+      </view>
+      <view class="rank-item rank-human">
+        <text class="rank-label">人上人</text>
+        <text class="rank-desc">4-10 次错误</text>
+      </view>
+      <view class="rank-item rank-npc">
+        <text class="rank-label">NPC</text>
+        <text class="rank-desc">11-20 次错误</text>
+      </view>
+      <view class="rank-item rank-la">
+        <text class="rank-label">拉完了</text>
+        <text class="rank-desc">大于 20 次错误</text>
+      </view>
+    </view>
+    <button class="start-btn" bindtap="startGame">开始闯关</button>
+  </view>
+
+  <!-- 时间线排序 -->
+  <view wx:if="{{status === 'playing'}}" class="game-area">
+    <view class="level-info">
+      <text class="level-text">第 {{level}} 关 / 共 {{totalLevels}} 关</text>
+      <text class="error-text">错误次数：{{errorCount}}</text>
+    </view>
+    <view class="game-hint">点击两个卡片交换位置，按年份从小到大排序</view>
+
+    <view class="card-list">
+      <view wx:for="{{events}}" wx:key="index" wx:for-index="idx"
+            class="event-card {{selectedIndex === idx ? 'card-selected' : ''}}"
+            bindtap="selectCard" hover-class="tap-active" data-index="{{idx}}">
+        <view class="card-title">{{item.title}}</view>
+        <view class="card-category">{{item.category}}</view>
+      </view>
+    </view>
+
+    <button class="confirm-btn" bindtap="confirmOrder">确认排序</button>
+  </view>
+
+  <!-- 单关通过 -->
+  <view wx:if="{{status === 'levelPass'}}" class="result-area">
+    <view class="result-icon">✓</view>
+    <view class="result-title">第 {{level}} 关通过！</view>
+    <view class="result-desc">当前错误次数：{{errorCount}}</view>
+    <button class="next-btn" bindtap="nextLevel">{{level < totalLevels ? '进入下一关' : '进入知识问答'}}</button>
+  </view>
+
+  <!-- 知识问答 -->
+  <view wx:if="{{status === 'quiz'}}" class="quiz-area">
+    <view class="level-info">
+      <text class="level-text">知识问答 {{quizIndex + 1}} / {{quizTotal}}</text>
+      <text class="error-text">错误次数：{{errorCount}}</text>
+    </view>
+
+    <view class="quiz-question retro-card">
+      <view class="quiz-type">{{quizQuestion.type === 'event2year' ? '事件 → 年份' : '年份 → 事件'}}</view>
+      <view class="quiz-stem">{{quizQuestion.stem}}</view>
+    </view>
+
+    <view class="quiz-options">
+      <view wx:for="{{quizQuestion.options}}" wx:key="index"
+            class="quiz-option {{quizSelected === index ? 'option-selected' : ''}} {{quizShowResult ? (index === quizQuestion.correctIndex ? 'option-correct' : (quizSelected === index ? 'option-wrong' : '')) : ''}}"
+            bindtap="selectQuizOption" hover-class="tap-active" data-index="{{index}}">
+        <text class="option-label">{{['A','B','C','D'][index]}}. {{item}}</text>
+      </view>
+    </view>
+
+    <button class="confirm-btn" bindtap="confirmQuiz" disabled="{{quizSelected === -1}}">{{quizIndex + 1 < quizTotal ? '下一题' : '查看评级'}}</button>
+  </view>
+
+</view>

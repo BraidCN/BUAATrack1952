@@ -1,0 +1,73 @@
+/* 关于页样式 */
+
+.about-header {
+  text-align: center;
+  padding: 40rpx 0;
+}
+
+.about-logo {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 32rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.10);
+}
+
+.about-name {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: var(--primary-blue);
+  letter-spacing: 6rpx;
+}
+
+.about-version {
+  font-size: 24rpx;
+  color: var(--text-light);
+  margin-top: 6rpx;
+}
+
+.about-section {
+  margin-bottom: 20rpx;
+}
+
+.about-section-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 12rpx;
+  padding-bottom: 8rpx;
+  border-bottom: 3rpx double var(--border-color);
+}
+
+.about-text {
+  font-size: 26rpx;
+  color: #444;
+  line-height: 1.8;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rpx;
+}
+
+.tech-item {
+  font-size: 24rpx;
+  color: var(--primary-blue);
+  background: #f0f4f8;
+  border: 2rpx solid #d0dce8;
+  border-radius: 20rpx;
+  padding: 8rpx 20rpx;
+}
+
+.about-footer {
+  text-align: center;
+  padding: 40rpx 0;
+}
+
+.footer-text {
+  display: block;
+  font-size: 22rpx;
+  color: var(--text-light);
+  margin: 4rpx 0;
+}

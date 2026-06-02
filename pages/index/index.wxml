@@ -1,0 +1,127 @@
+<!-- 首页 - 北航概览 -->
+<view class="page-container">
+
+  <!-- 顶部品牌区域 -->
+  <view class="hero-section">
+    <view class="hero-icon">
+      <image src="/images/logo-icon.png" mode="aspectFit" class="hero-logo"></image>
+    </view>
+    <view class="hero-title">航迹1952</view>
+    <view class="hero-year">1952 — 2026</view>
+    <view class="hero-subtitle">北京航空航天大学 · 校史</view>
+    <view class="gold-line"></view>
+    <view class="hero-quote">"德才兼备，知行合一"</view>
+  </view>
+
+  <!-- 统计卡片 -->
+  <view class="stats-row">
+    <view class="stat-card">
+      <view class="stat-number">{{years}} 年</view>
+      <view class="stat-label">建校历史</view>
+    </view>
+    <view class="stat-card">
+      <view class="stat-number">{{eventsCount}} 件</view>
+      <view class="stat-label">大事记</view>
+    </view>
+    <view class="stat-card">
+      <view class="stat-number">{{categoriesCount}} 类</view>
+      <view class="stat-label">事件分类</view>
+    </view>
+  </view>
+
+  <!-- 分类入口 -->
+  <view class="section-title">探索校史</view>
+  <view class="category-grid">
+    <view class="category-item" hover-class="tap-active" bindtap="goToTimeline" data-category="建校">
+      <view class="ico-box ico-build">
+        <view class="ico-build-roof"></view>
+        <view class="ico-build-pillar ico-build-pillar-l"></view>
+        <view class="ico-build-pillar ico-build-pillar-r"></view>
+        <view class="ico-build-base"></view>
+        <view class="ico-build-star"></view>
+      </view>
+      <text>建校历程</text>
+    </view>
+    <view class="category-item" hover-class="tap-active" bindtap="goToTimeline" data-category="科研">
+      <view class="ico-box ico-research">
+        <view class="ico-rocket-head"></view>
+        <view class="ico-rocket-body"></view>
+        <view class="ico-rocket-window"></view>
+        <view class="ico-rocket-fin-l"></view>
+        <view class="ico-rocket-fin-r"></view>
+        <view class="ico-rocket-flame"></view>
+      </view>
+      <text>科研成就</text>
+    </view>
+    <view class="category-item" hover-class="tap-active" bindtap="goToTimeline" data-category="教学">
+      <view class="ico-box ico-edu">
+        <view class="ico-book-left"></view>
+        <view class="ico-book-right"></view>
+        <view class="ico-book-spine"></view>
+      </view>
+      <text>教学育人</text>
+    </view>
+    <view class="category-item" hover-class="tap-active" bindtap="goToTimeline" data-category="校园">
+      <view class="ico-box ico-campus">
+        <view class="ico-tower-top"></view>
+        <view class="ico-tower-body"></view>
+        <view class="ico-tower-window ico-tower-w1"></view>
+        <view class="ico-tower-window ico-tower-w2"></view>
+        <view class="ico-tower-window ico-tower-w3"></view>
+        <view class="ico-tower-window ico-tower-w4"></view>
+      </view>
+      <text>校园变迁</text>
+    </view>
+    <view class="category-item" hover-class="tap-active" bindtap="goToTimeline" data-category="荣誉">
+      <view class="ico-box ico-honor">
+        <view class="ico-trophy-star"></view>
+        <view class="ico-trophy-cup"></view>
+        <view class="ico-trophy-stem"></view>
+        <view class="ico-trophy-base"></view>
+      </view>
+      <text>荣誉成就</text>
+    </view>
+    <view class="category-item" hover-class="tap-active" bindtap="goToAI">
+      <view class="ico-box ico-ai">
+        <view class="ico-chip-body">
+          <text class="ico-chip-text">AI</text>
+        </view>
+        <view class="ico-chip-pin chip-t"></view>
+        <view class="ico-chip-pin chip-b"></view>
+        <view class="ico-chip-pin chip-l"></view>
+        <view class="ico-chip-pin chip-r"></view>
+      </view>
+      <text>AI问校史</text>
+    </view>
+    <view class="category-item" hover-class="tap-active" bindtap="goToDaily">
+      <view class="ico-box ico-daily">
+        <view class="ico-cal-ring ico-cal-ring-l"></view>
+        <view class="ico-cal-ring ico-cal-ring-r"></view>
+        <view class="ico-cal-body">
+          <view class="ico-cal-line"></view>
+          <view class="ico-cal-line"></view>
+          <view class="ico-cal-line"></view>
+        </view>
+      </view>
+      <text>每日一史</text>
+    </view>
+    <view class="category-item" hover-class="tap-active" bindtap="goToChallenge">
+      <view class="ico-box ico-challenge">
+        <view class="ico-flag-pole"></view>
+        <view class="ico-flag-cloth"></view>
+      </view>
+      <text>校史闯关</text>
+    </view>
+  </view>
+
+  <!-- 校训 -->
+  <view class="motto-section retro-card">
+    <view class="section-title">校训校风</view>
+    <view class="motto-text">德才兼备 知行合一</view>
+    <view class="motto-desc">校训</view>
+    <view class="motto-divider"></view>
+    <view class="motto-text motto-small">艰苦朴素 勤奋好学</view>
+    <view class="motto-text motto-small">全面发展 勇于创新</view>
+    <view class="motto-desc">校风</view>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+<!-- 大事记详情 -->
+<view class="page-container">
+  <view wx:if="{{loading}}" class="loading">加载中...</view>
+
+  <view wx:if="{{!loading && event}}" class="detail-content">
+    <view class="detail-header">
+      <view class="year-badge">{{event.year}}</view>
+      <text class="category-tag">{{event.category}}</text>
+    </view>
+
+    <view class="detail-title">{{event.title}}</view>
+
+    <view class="detail-summary retro-card">
+      <text>{{event.summary}}</text>
+    </view>
+
+    <view class="detail-body retro-card">
+      <view class="detail-section-title">历史详情</view>
+      <text class="detail-text">{{event.details}}</text>
+    </view>
+
+    <view class="detail-tags" wx:if="{{event.tags && event.tags.length > 0}}">
+      <text class="tag-label">相关标签：</text>
+      <text wx:for="{{event.tags}}" wx:key="*this" class="tag-item">{{item}}</text>
+    </view>
+  </view>
+
+  <view wx:if="{{!loading && !event}}" class="empty-state">
+    <text>未找到该年份的校史记录</text>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<view class="page-container">
+  <view class="banner-title">通关海报</view>
+
+  <view class="poster-card {{rankClass}}">
+    <view class="poster-header">
+      <view class="poster-logo">航迹1952</view>
+      <view class="poster-sub">北航校史闯关挑战</view>
+    </view>
+
+    <view class="poster-rank">{{rankLabel}}</view>
+    <view class="poster-rank-desc">{{rankDesc}}</view>
+
+    <view class="poster-stats">
+      <view class="stat-line">
+        <text class="stat-name">错误次数</text>
+        <text class="stat-value">{{errorCount}} 次</text>
+      </view>
+      <view class="stat-line">
+        <text class="stat-name">通关关卡</text>
+        <text class="stat-value">3 / 3</text>
+      </view>
+    </view>
+
+    <view class="poster-footer">
+      <text>空天报国 · 逐梦一流</text>
+      <text> </text>
+      <text>北京航空航天大学</text>
+    </view>
+  </view>
+
+  <canvas type="2d" id="posterCanvas" class="hidden-canvas"></canvas>
+
+  <button class="save-btn" bindtap="savePoster">保存海报到相册</button>
+</view>
