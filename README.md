@@ -9,7 +9,7 @@
 - 26 组关键词匹配 AI 问答引擎
 
 ## 版本
-v0.1.3
+dev26w05a
 
 ## 部署
 1. 下载[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
